@@ -207,9 +207,9 @@ namespace ShuDu
         /// <summary>
         /// 推算结果是否结束 待确定
         /// </summary>
-        /// <param name="L"></param>
+        /// <param name="l"></param>
         /// <returns></returns>
-        private bool CheckEnd(List<int>[,] L)
+        private bool CheckEnd(List<int>[,] l)
         {
             // bool IsEnd = true;
             int counts = 0;
@@ -217,7 +217,7 @@ namespace ShuDu
             {
                 for (var c = 0; c < 9; c++)
                 {
-                    counts += L[r, c].Count;
+                    counts += l[r, c].Count;
                 }
             }
 
@@ -325,7 +325,7 @@ namespace ShuDu
                 int nextr = 0; int nextc = 0;
                 GetNextRc(r, c, ref nextr, ref nextc);
 
-                if (nextr == 9 && nextc == 0)//到了最后一个节点
+                if (nextr == 9 && nextc == 0) // 到了最后一个节点
                 {
                     Printout(tempList);
                     _getResult = true;
